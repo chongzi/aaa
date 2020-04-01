@@ -1,0 +1,68 @@
+{extend name="layout/common" /}
+
+{block name="header"}
+
+{/block}
+{block name="body"}
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-success">
+            <div class="box-header with-border">
+            </div>
+            <form method="post" action="{:Url('upd')}" enctype="multipart/form-data" onsubmit="return plan._submit($(this))">
+                <table class="table table-hover table-bordered">
+                    <tbody>
+                        <tr>
+                            <td colspan="3"><h3>{$id ? '编辑' : '添加'}域名</h3></td>
+                        </tr>
+                        <tr>
+                            <td width="200">域名：</td>
+                            {if condition="$id gt 0"}
+                                <td colspan="3">
+                                    <input name="domain" id="domain"  size="50" type="text" value="{$info['domain_remark']}" style="width: 400px;" />
+                                </td>
+                            {else /}
+                            <td colspan="3">
+                                <textarea name="domain" id="domain" style="width:500px;height:300px;" placeholder="格式如下(一行一个,备注用英文逗号,没有不用填)：&#10;apk17.com,下载站&#10;6071.com"></textarea>
+                            </td>
+                            {/if}
+
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="row-fluid" style="margin-top: 20px;margin-left: 200px;padding-bottom:20px;">
+                    <notempty name="info.id"><input type="hidden" name="id" value="{$info['id']}"/></notempty>
+                    <button class="btn btn-primary" type="submit">提交</button>
+                    <button class="btn" type="reset" style="margin-left: 30px;" onclick="history.back(-1)">返回</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    var plan = {
+        id:{$info.id|default=0},
+
+        init:function () {
+
+        },
+
+
+        _submit:function (form){
+            var domain_input = form.find('input[name="domain"]');
+            var domain_textarea = form.find('textarea[name="domain"]');
+
+            if(domain_input.length>0){
+                if($.trim(domain_input.val())==''){
+                      alert('请填写域名');return false;
+                }
+            }
+
+            return true;
+        },
+    };
+    plan.init();
+</script>
+{/block}

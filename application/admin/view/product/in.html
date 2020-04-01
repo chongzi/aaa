@@ -1,0 +1,67 @@
+{extend name="layout/common" /}
+
+{block name="header"}
+<section class="content-header">
+    <h1>
+        导入订单
+    </h1>
+</section>
+{/block}
+
+{block name="body"}
+<div style="position:relative">
+    <a href="{$Think.config.__PUBLIC__}upload/order模板.xlsx" download="order模板.xlsx">
+        <img src="{$Think.config.__PUBLIC__}images/excel.png">
+    </a>
+    <span style="position:absolute;left:0px;top:70px;">点击下载模板</span>
+</div>
+<div class="layui-upload-drag" id="test10" style="margin-left:300px;margin-top:100px;">
+    <i class="layui-icon"></i>
+    <p>点击上传，或将文件拖拽到此处</p>
+    <div class="layui-hide" id="uploadDemoView">
+        <hr>
+        <img src="" alt="上传成功后渲染" style="max-width: 196px">
+    </div>
+</div>
+
+<script>
+    layui.use('upload', function(){
+        var $ = layui.jquery
+            ,upload = layui.upload;
+
+        //选完文件后不自动上传
+       /* upload.render({
+            elem: '#test8'
+            ,url: 'https://httpbin.org/post' //改成您自己的上传接口
+            ,auto: false
+            //,multiple: true
+            ,bindAction: '#test9'
+            ,done: function(res){
+                layer.msg('上传成功');
+                console.log(res)
+            }
+        });*/
+
+        //拖拽上传
+        upload.render({
+            elem: '#test10'
+            ,url: "{:url('Product/mdUpload')}" //改成您自己的上传接口
+            ,accept: 'file' //普通文件
+            ,exts: 'xls|xlsx' //只允许上传压缩文件
+            ,done: function(res){
+                if(res.code == 0){
+                    layer.msg(res.msg, {icon: 2, time: 2000});
+                }else{
+                    layer.msg(res.msg);
+                }
+
+                //  layui.$('#uploadDemoView').removeClass('layui-hide').attr('src', res.files.file);
+
+            }
+        });
+
+
+
+    });
+</script>
+{/block}

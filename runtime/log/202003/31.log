@@ -1,0 +1,101 @@
+---------------------------------------------------------------
+[ 2020-03-31T10:17:53+08:00 ] 127.0.0.1 GET /admin/domain/edit.html
+[ info ] v5.od.com/admin/domain/edit.html [运行时间：0.157269s][吞吐率：6.36req/s] [内存消耗：3,713.84kb] [文件加载：72]
+[ error ] [8]未定义变量: info[D:\phpstudy\PHPTutorial\WWW\od\runtime\temp\e5f66a23a932199f82a6c1347d167506.php:249]
+---------------------------------------------------------------
+[ 2020-03-31T10:27:01+08:00 ] 127.0.0.1 GET /admin/domain/edit.html
+[ info ] v5.od.com/admin/domain/edit.html [运行时间：0.456997s][吞吐率：2.19req/s] [内存消耗：3,070.15kb] [文件加载：58]
+[ error ] [1049]SQLSTATE[HY000] [1049] Unknown database 'od'[D:\phpstudy\PHPTutorial\WWW\od\thinkphp\library\think\db\Connection.php:293]
+---------------------------------------------------------------
+[ 2020-03-31T10:27:37+08:00 ] 127.0.0.1 GET /admin/domain/edit.html
+[ info ] v5.od.com/admin/domain/edit.html [运行时间：0.916570s][吞吐率：1.09req/s] [内存消耗：3,714.65kb] [文件加载：72]
+[ error ] [8]未定义变量: info[D:\phpstudy\PHPTutorial\WWW\od\runtime\temp\e5f66a23a932199f82a6c1347d167506.php:249]
+---------------------------------------------------------------
+[ 2020-03-31T11:01:36+08:00 ] 127.0.0.1 GET /admin/module/index.html
+[ info ] domain.tnxxjst.com/admin/module/index.html [运行时间：0.929827s][吞吐率：1.08req/s] [内存消耗：4,164.08kb] [文件加载：77]
+[ error ] [8]未定义变量: module_name[D:\phpstudy\PHPTutorial\WWW\od\extend\base\ModuleFile.php:127]
+[ error ] [8]未定义变量: module_name[D:\phpstudy\PHPTutorial\WWW\od\extend\base\ModuleFile.php:127]
+[ error ] [8]未定义变量: module_name[D:\phpstudy\PHPTutorial\WWW\od\extend\base\ModuleFile.php:127]
+[ error ] [8]未定义变量: module_name[D:\phpstudy\PHPTutorial\WWW\od\extend\base\ModuleFile.php:127]
+[ error ] [8]未定义变量: module_name[D:\phpstudy\PHPTutorial\WWW\od\extend\base\ModuleFile.php:127]
+[ error ] [8]未定义变量: module_name[D:\phpstudy\PHPTutorial\WWW\od\extend\base\ModuleFile.php:127]
+---------------------------------------------------------------
+[ 2020-03-31T12:24:05+08:00 ] 127.0.0.1 GET /admin/manager/index.html
+[ info ] domain.tnxxjst.com/admin/manager/index.html [运行时间：1.030828s][吞吐率：0.97req/s] [内存消耗：3,902.66kb] [文件加载：73]
+[ error ] [0]method not exist:think\db\Query->statusText[D:\phpstudy\PHPTutorial\WWW\od\thinkphp\library\think\db\Query.php:94]
+---------------------------------------------------------------
+[ 2020-03-31T12:27:35+08:00 ] 127.0.0.1 GET /admin/manager/index.html
+[ info ] domain.tnxxjst.com/admin/manager/index.html [运行时间：1.008556s][吞吐率：0.99req/s] [内存消耗：3,720.35kb] [文件加载：71]
+[ error ] [0]method not exist:think\db\Query->statusText[D:\phpstudy\PHPTutorial\WWW\od\thinkphp\library\think\db\Query.php:94]
+---------------------------------------------------------------
+[ 2020-03-31T12:27:38+08:00 ] 127.0.0.1 GET /admin/manager/index.html
+[ info ] domain.tnxxjst.com/admin/manager/index.html [运行时间：1.060518s][吞吐率：0.94req/s] [内存消耗：3,720.35kb] [文件加载：71]
+[ error ] [0]method not exist:think\db\Query->statusText[D:\phpstudy\PHPTutorial\WWW\od\thinkphp\library\think\db\Query.php:94]
+---------------------------------------------------------------
+[ 2020-03-31T12:33:00+08:00 ] 127.0.0.1 GET /admin/manager/index.html
+[ info ] domain.tnxxjst.com/admin/manager/index.html [运行时间：1.143398s][吞吐率：0.87req/s] [内存消耗：3,902.90kb] [文件加载：73]
+[ error ] [0]method not exist:think\db\Query->statusText[D:\phpstudy\PHPTutorial\WWW\od\thinkphp\library\think\db\Query.php:94]
+---------------------------------------------------------------
+[ 2020-03-31T12:34:45+08:00 ] 127.0.0.1 GET /admin/manager/index.html
+[ info ] domain.tnxxjst.com/admin/manager/index.html [运行时间：1.441313s][吞吐率：0.69req/s] [内存消耗：3,903.15kb] [文件加载：73]
+[ error ] [0]method not exist:think\db\Query->statusText[D:\phpstudy\PHPTutorial\WWW\od\thinkphp\library\think\db\Query.php:94]
+---------------------------------------------------------------
+[ 2020-03-31T12:35:21+08:00 ] 127.0.0.1 GET /admin/manager/index.html
+[ info ] domain.tnxxjst.com/admin/manager/index.html [运行时间：1.253311s][吞吐率：0.80req/s] [内存消耗：3,357.72kb] [文件加载：63]
+[ error ] [8]未定义数组索引: manager[D:\phpstudy\PHPTutorial\WWW\od\application\admin\controller\Manager.php:15]
+---------------------------------------------------------------
+[ 2020-03-31T12:35:48+08:00 ] 127.0.0.1 GET /admin/manager/index.html
+[ info ] domain.tnxxjst.com/admin/manager/index.html [运行时间：1.235109s][吞吐率：0.81req/s] [内存消耗：3,778.39kb] [文件加载：72]
+[ error ] [8]未定义变量: managers[D:\phpstudy\PHPTutorial\WWW\od\runtime\temp\cee211b83af657731d88631398a7d718.php:243]
+[ error ] [8]未定义变量: managers[D:\phpstudy\PHPTutorial\WWW\od\runtime\temp\cee211b83af657731d88631398a7d718.php:243]
+[ error ] [8]未定义变量: managers[D:\phpstudy\PHPTutorial\WWW\od\runtime\temp\cee211b83af657731d88631398a7d718.php:243]
+[ error ] [8]未定义变量: managers[D:\phpstudy\PHPTutorial\WWW\od\runtime\temp\cee211b83af657731d88631398a7d718.php:269]
+[ error ] [1]Call to a member function render() on a non-object[D:\phpstudy\PHPTutorial\WWW\od\runtime\temp\cee211b83af657731d88631398a7d718.php:269]
+---------------------------------------------------------------
+[ 2020-03-31T12:36:10+08:00 ] 127.0.0.1 GET /admin/manager/index.html
+[ info ] domain.tnxxjst.com/admin/manager/index.html [运行时间：1.328001s][吞吐率：0.75req/s] [内存消耗：3,911.22kb] [文件加载：73]
+[ error ] [8]未定义变量: managers[D:\phpstudy\PHPTutorial\WWW\od\runtime\temp\cee211b83af657731d88631398a7d718.php:243]
+[ error ] [8]未定义变量: managers[D:\phpstudy\PHPTutorial\WWW\od\runtime\temp\cee211b83af657731d88631398a7d718.php:243]
+[ error ] [8]未定义变量: managers[D:\phpstudy\PHPTutorial\WWW\od\runtime\temp\cee211b83af657731d88631398a7d718.php:243]
+---------------------------------------------------------------
+[ 2020-03-31T12:36:13+08:00 ] 127.0.0.1 GET /admin/manager/index.html
+[ info ] domain.tnxxjst.com/admin/manager/index.html [运行时间：0.963896s][吞吐率：1.04req/s] [内存消耗：3,730.73kb] [文件加载：71]
+[ error ] [8]未定义变量: managers[D:\phpstudy\PHPTutorial\WWW\od\runtime\temp\cee211b83af657731d88631398a7d718.php:243]
+[ error ] [8]未定义变量: managers[D:\phpstudy\PHPTutorial\WWW\od\runtime\temp\cee211b83af657731d88631398a7d718.php:243]
+[ error ] [8]未定义变量: managers[D:\phpstudy\PHPTutorial\WWW\od\runtime\temp\cee211b83af657731d88631398a7d718.php:243]
+---------------------------------------------------------------
+[ 2020-03-31T13:25:53+08:00 ] 127.0.0.1 GET /admin/manager/index.html
+[ info ] domain.tnxxjst.com/admin/manager/index.html [运行时间：1.089450s][吞吐率：0.92req/s] [内存消耗：3,902.41kb] [文件加载：73]
+[ error ] [0]method not exist:think\db\Query->statusText[D:\phpstudy\PHPTutorial\WWW\od\thinkphp\library\think\db\Query.php:94]
+---------------------------------------------------------------
+[ 2020-03-31T13:31:18+08:00 ] 127.0.0.1 GET /admin/manager/index.html
+[ info ] domain.tnxxjst.com/admin/manager/index.html [运行时间：2.014252s][吞吐率：0.50req/s] [内存消耗：3,719.91kb] [文件加载：71]
+[ error ] [0]method not exist:think\db\Query->statusText[D:\phpstudy\PHPTutorial\WWW\od\thinkphp\library\think\db\Query.php:94]
+---------------------------------------------------------------
+[ 2020-03-31T13:45:48+08:00 ] 127.0.0.1 GET /admin/domain/edit.html
+[ info ] domain.tnxxjst.com/admin/domain/edit.html [运行时间：0.743395s][吞吐率：1.35req/s] [内存消耗：3,714.37kb] [文件加载：72]
+[ error ] [8]未定义变量: info[D:\phpstudy\PHPTutorial\WWW\od\runtime\temp\e5f66a23a932199f82a6c1347d167506.php:249]
+---------------------------------------------------------------
+[ 2020-03-31T13:50:48+08:00 ] 127.0.0.1 GET /admin/domain/edit.html
+[ info ] domain.tnxxjst.com/admin/domain/edit.html [运行时间：0.966707s][吞吐率：1.03req/s] [内存消耗：3,894.61kb] [文件加载：74]
+[ error ] [8]未定义变量: info[D:\phpstudy\PHPTutorial\WWW\od\runtime\temp\e5f66a23a932199f82a6c1347d167506.php:249]
+---------------------------------------------------------------
+[ 2020-03-31T15:15:29+08:00 ] 127.0.0.1 GET /admin/domain/edit.html
+[ info ] domain.tnxxjst.com/admin/domain/edit.html [运行时间：0.862410s][吞吐率：1.16req/s] [内存消耗：3,714.44kb] [文件加载：72]
+[ error ] [8]未定义变量: info[D:\phpstudy\PHPTutorial\WWW\od\runtime\temp\e5f66a23a932199f82a6c1347d167506.php:249]
+---------------------------------------------------------------
+[ 2020-03-31T15:51:24+08:00 ] 127.0.0.1 GET /admin/check_icp/icp
+[ info ] domain.tnxxjst.com/admin/check_icp/icp [运行时间：1.349460s][吞吐率：0.74req/s] [内存消耗：3,084.05kb] [文件加载：56]
+[ error ] [8]未定义变量: result[D:\phpstudy\PHPTutorial\WWW\od\application\admin\controller\CheckIcp.php:67]
+---------------------------------------------------------------
+[ 2020-03-31T15:51:52+08:00 ] 127.0.0.1 GET /admin/check_icp/icp
+[ info ] domain.tnxxjst.com/admin/check_icp/icp [运行时间：1.227260s][吞吐率：0.81req/s] [内存消耗：3,084.45kb] [文件加载：56]
+[ error ] [8]未定义变量: result[D:\phpstudy\PHPTutorial\WWW\od\application\admin\controller\CheckIcp.php:67]
+---------------------------------------------------------------
+[ 2020-03-31T16:04:45+08:00 ] 127.0.0.1 GET /admin/check_icp/icp
+[ info ] domain.tnxxjst.com/admin/check_icp/icp [运行时间：1.961314s][吞吐率：0.51req/s] [内存消耗：3,084.23kb] [文件加载：56]
+[ error ] [8]未定义变量: result[D:\phpstudy\PHPTutorial\WWW\od\application\admin\controller\CheckIcp.php:66]
+---------------------------------------------------------------
+[ 2020-03-31T17:58:53+08:00 ] 127.0.0.1 GET /admin/manager/index.html
+[ info ] domain.tnxxjst.com/admin/manager/index.html [运行时间：1.027891s][吞吐率：0.97req/s] [内存消耗：3,719.92kb] [文件加载：71]
+[ error ] [0]method not exist:think\db\Query->statusText[D:\phpstudy\PHPTutorial\WWW\od\thinkphp\library\think\db\Query.php:94]

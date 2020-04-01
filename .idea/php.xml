@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/Vendor/composer" />
+      <path value="$PROJECT_DIR$/Vendor/topthink/think-image" />
+      <path value="$PROJECT_DIR$/Vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/Vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/Vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/Vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/Vendor/zendframework/zend-escaper" />
+      <path value="$PROJECT_DIR$/Vendor/zendframework/zend-stdlib" />
+      <path value="$PROJECT_DIR$/Vendor/kiddyu/beanbun" />
+      <path value="$PROJECT_DIR$/Vendor/pclzip/pclzip" />
+      <path value="$PROJECT_DIR$/Vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/Vendor/aliyuncs/oss-sdk-php" />
+    </include_path>
+  </component>
+</project>

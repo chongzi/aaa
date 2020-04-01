@@ -1,0 +1,61 @@
+{extend name="layout/common" /}
+
+{block name="header"}
+<section class="content-header">
+    <h1>
+        导出采购单
+    </h1>
+</section>
+{/block}
+
+{block name="body"}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box box-success">
+            <div class="box-header">
+                <form method="get" action="{:url('Product/buyOrder')}" class="form-inline" id="form">
+                    <input type="text" id="vendor" name="vendor" value="{$vendor}" placeholder="供货商" class="form-control"/>
+                    <input type="text" id="start_time" name="start_time" value="{$start_date}" placeholder="起始时间" class="form-control"/>
+                    <input type="text" id="end_time" name="end_time" value="{$end_date}" placeholder="结束时间" class="form-control"/>
+                    <a class="btn btn-success btn-sm"  onclick="product.excel($('form'))">导出</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var product = {
+        init:function () {
+            product.date();
+        },
+        date:function () {
+            $('#start_time').datetimepicker({
+                format: 'yyyy-mm-dd',
+                language:"zh-CN",
+                minView:2,
+                autoclose:true
+            });
+            $('#end_time').datetimepicker({
+                format: 'yyyy-mm-dd',
+                language:"zh-CN",
+                minView:2,
+                autoclose:true
+            });
+            $('#datetimepicker').datetimepicker({
+                format: 'yyyy-mm-dd',
+                language:"zh-CN",
+                minView:2,
+                autoclose:true,
+                pickerPosition:'bottom-left'
+            });
+        },
+        excel:function (form) {
+            var url = form.attr('action');
+            var data = form.serialize();
+            data += '&excel=1';
+            window.location.href= url + '?' + data;
+        }
+    };
+    product.init();
+</script>
+{/block}

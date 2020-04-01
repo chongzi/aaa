@@ -1,0 +1,131 @@
+{extend name="layout/common" /}
+
+{block name="header"}
+
+<section class="content-header">
+    <h1>
+        域名列表
+    </h1>
+</section>
+{/block}
+
+{block name="body"}
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="box box-success">
+            <div class="box-header">
+                <a href="{:url('Domain/edit')}" type="button" class="btn btn-success btn-sm">添加<i class="fa fa-fw fa-plus"></i></a>
+                <p><p/>
+                <form method="get" action="{:url('/yc')}" id="search" class="form-inline">
+                    <input  type="text" name="domain" value="{$domain}" placeholder="请输入域名" class="form-control"/>
+                    <a class="btn btn-success btn-sm"  href="javascript:$('#search').submit();">搜  索</a>
+                </form>
+            </div>
+            <form method="POST" id="form_list" name="form_list">
+                <div class="box-body">
+                    <table class="table table-hover table-bordered">
+                        <tr>
+                            <th><input id="all"   type="checkbox"  onclick="chk_all()" /></th>
+                            <th class="">ID</th>
+                            <th class="">域名</th>
+                            <th class="">备注</th>
+                            <th class="">备案</th>
+                            <th class="">操作</th>
+                        </tr>
+                        {volist name="list" id="vo"}
+                        <tr>
+                            <td>
+                                <input class="check-all" type="checkbox" value="{$vo.id}" name="id[]" />
+                            </td>
+                            <td>
+                                {$vo.id}
+                            </td>
+                            <td>
+                                {$vo.domain}
+                            </td>
+                            <td>
+                                {$vo.remark}
+                            </td>
+                            <td>
+                                {if condition="$vo['status'] eq 0"}
+                                    <a type="button" class="btn btn-success btn-sm" onclick="plan.updStatus($(this),{$vo.id},1)">开启</a>
+                                {else /}
+                                    <a type="button" class="btn btn-default btn-sm" onclick="plan.updStatus($(this),{$vo.id},0)">关闭</a>
+                                {/if}
+                            </td>
+                            <td>
+                                <a href="{:url('edit?id='.$vo['id'])}">编辑</a>&nbsp;|
+                                <a title="删除" href="javascript:;" onclick="plan.del({$vo.id});">删除</a>
+                            </td>
+                        </tr>
+                        {/volist}
+                    </table>
+                    <div class="h_pagination" style="padding-top: 15px;">
+                        {$page_html}
+                    </div>
+                </div>
+                <div class="box-header" style="padding-bottom:20px;">
+                    <a class="btn btn-success btn-sm" onclick="plan.del('pi',0);">删除</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    var plan = {
+        init:function () {
+            $('#app_id').select2();
+        },
+
+        updStatus:function(o,id,status){
+            $.post("{:url('admin/domain/updStatus')}",{id:id,status:status},function (data) {
+                layer.closeAll();
+                if(data.code==1){
+                    layer.msg(data.msg, {icon: 1, time: 2000},function(){
+                        window.location.reload();
+                    });
+                }else{
+                    layer.msg(data.msg, {icon: 2,time: 2000});
+                }
+            },'json');
+        },
+        // 删除/恢复
+        del: function(ids,is_del){
+            if(typeof ids == 'undefined' || ids === 'pi'){
+                var ids = [];
+                $("input[name='id[]']:checked").each(function(){
+                    ids.push($(this).val());
+                });
+
+                if(ids.length==0){
+                    layer.msg('请勾选需要操作的数据', {icon: 2,time: 2000});
+                    return;
+                }
+            }
+            layer.confirm('确定执行删除操作？', {
+                btn: ['确定','取消'] //按钮
+            }, function(){
+                $.post("{:url('admin/domain/del')}",{'id':ids},function (data) {
+                    layer.closeAll();
+                    if(data.code==1){
+                        layer.msg(data.msg, {icon: 1, time: 2000},function(){
+                            window.location.reload();
+                        });
+                    }else{
+                        layer.msg(data.msg, {icon: 2,time: 2000});
+                    }
+                },'json');
+
+            });
+        }
+    };
+
+    plan.init();
+
+
+
+
+</script>
+{/block}

@@ -1,0 +1,4 @@
+---------------------------------------------------------------
+[ 2020-04-01T09:40:31+08:00 ] 127.0.0.1 GET /admin/domain/edit.html
+[ info ] domain.tnxxjst.com/admin/domain/edit.html [运行时间：1.503052s][吞吐率：0.67req/s] [内存消耗：3,904.02kb] [文件加载：74]
+[ error ] [8]未定义变量: info[D:\phpstudy\PHPTutorial\WWW\od\runtime\temp\e5f66a23a932199f82a6c1347d167506.php:249]

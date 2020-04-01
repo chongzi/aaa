@@ -1,0 +1,34 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table class="table table-hover table-bordered">
+    <tr>
+        <th class="">ID</th>
+        <th class="">产品图片</th>
+        <th class="">产品名称</th>
+        <th class="">产品单价(元)</th>
+        <th class="">产品数量</th>
+        <th class="">供货商</th>
+        <th class="">添加日期</th>
+    </tr>
+    {volist name="list" id="vo"}
+    <tr>
+        <td>{$vo.id}</td>
+        <td>
+            {notempty name="$vo.product_img"}
+            <img src="{$vo.product_img}" width="100" height="50">
+            {/notempty}
+        </td>
+        <td>{$vo.product_name}</td>
+        <td>{$vo.price}</td>
+        <td>{$vo.num}</td>
+        <td>{$vo.vendor}</td>
+        <td>{$vo.add_date|strDate}</td>
+    </tr>
+    {/volist}
+</table>
+</body>
+
+</html>
